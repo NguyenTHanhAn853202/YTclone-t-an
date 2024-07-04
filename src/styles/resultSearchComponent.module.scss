@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+.wrapper{
+
+    &:hover{
+        background-color: #eae9e9;
+    }
+    &>span{
+        font-size:1.3rem ;
+        color:rgb(84, 84, 231);
+        cursor: pointer;
+    }
+    &>span:hover{
+        
+        text-decoration: underline;
+    }
+}
