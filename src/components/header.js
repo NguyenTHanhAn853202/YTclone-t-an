@@ -49,7 +49,7 @@ function Header() {
     }
 
     useEffect(()=>{
-        const value =JSON.parse( localStorage.search)
+        const value = localStorage.search?JSON.parse(localStorage.search):[]
         const limit = 10
         const result = []
         if(value.length >= limit){

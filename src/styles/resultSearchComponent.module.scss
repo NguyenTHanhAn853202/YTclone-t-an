@@ -3,7 +3,7 @@
 .wrapper{
 
     &:hover{
-        background-color: #eae9e9;
+        background-color: $background-color-actice;
     }
     &>span{
         font-size:1.3rem ;

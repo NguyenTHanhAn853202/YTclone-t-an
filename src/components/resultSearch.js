@@ -16,14 +16,14 @@ function ResultSearch({title,onHandleEvent,index,setListSearched}) {
             newProps.splice(index,1)
             return newProps
         });
-        const valueSearchs = JSON.parse(localStorage.search)
+        const valueSearchs = JSON.parse(localStorage.search) || localStorage.search
         valueSearchs.splice(index,1)
-        localStorage.setItem('search',JSON.stringify(valueSearchs))
+        valueSearchs && localStorage.setItem('search',JSON.stringify(valueSearchs))
         
     }
 
     const hasTitle = useMemo(()=>{
-        const listSearched = JSON.parse(localStorage.getItem('search'));
+        const listSearched = JSON.parselocalStorage?.search;
         return listSearched.find((item)=>item === title)
     },[])
 

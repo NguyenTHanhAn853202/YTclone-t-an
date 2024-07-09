@@ -5,11 +5,12 @@
 }
 
 .wrapper{
-    padding: 10px 0;
+    padding: 10px $layout-space-left;
     display: flex;
     justify-content: center;
     .container{
-        width: 97%;
+        // width: 97%;
+        width: 100%;
         .contain-ip{
         
             position: relative;

@@ -1,0 +1,73 @@
+@use "variables" as *;
+
+:root   {
+    --space-container-bottom:10px;
+}
+
+.wrapper{
+    width: 240px;
+    padding-left: calc($layout-space-left - 7px);
+    .navigate{
+        cursor: pointer;
+        width: 206px;
+        margin: 2px 0;
+        padding:7px 10px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        h6{
+            margin-left: 20px;
+            font-size: 1.5rem;
+            line-height: 25px;
+            height: 25px;
+        }
+        span{
+            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            height: 25px;
+
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        &:hover{
+            background-color: $background-color-actice;
+        }
+    }
+
+
+    .main-content, .history, .subscribed{
+        border-bottom: 1px solid $wall-color;
+        padding-bottom: var(--space-container-bottom);
+        
+        .active{
+            background-color: $background-color-actice;
+            &>span{
+                color:$primary-color;
+                
+            }
+            &>h6{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .history, .subscribed{
+        margin-top: var(--space-container-bottom);
+    }
+    .subscribed{
+        h6{
+            display: -webkit-box;
+            -webkit-line-clamp: 1;  /* số dòng hiển thị */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            visibility: visible;
+        }
+
+    }
+
+}

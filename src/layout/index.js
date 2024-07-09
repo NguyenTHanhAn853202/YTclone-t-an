@@ -1,5 +1,6 @@
 import classNames from "classnames/bind"
 import Header from "~/components/header";
+import SideBar from "~/components/sideBar";
 import styles from "~/styles/layoutPage.module.scss"
 
 const cx = classNames.bind(styles)
@@ -11,8 +12,8 @@ function Layout({children}) {
                 <Header />
             </header>
             <main className="d-flex">
-                <nav>
-                    side bar
+                <nav>   
+                    <SideBar />
                 </nav>
                 <div>{children}</div>
             </main>
