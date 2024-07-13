@@ -5,7 +5,11 @@
 }
 
 .wrapper{
+    position: fixed;
+    overflow: hidden;
+    height: calc(100dvh - $height-header - $padding-bottom-top-header);
     width: 240px;
+    overflow-y: scroll ;
     padding-left: calc($layout-space-left - 7px);
     .navigate{
         cursor: pointer;
@@ -55,8 +59,11 @@
         }
     }
 
-    .history, .subscribed{
+    .history, .subscribed,.setting{
         margin-top: var(--space-container-bottom);
+    }
+    .setting{
+        padding-bottom: calc(var(--space-container-bottom) + 10px);
     }
     .subscribed{
         h6{
@@ -69,5 +76,21 @@
         }
 
     }
+    .small{
+        display: block;
+        width: 70px;
+        padding-right: 0;
+        padding-left: 0;
+        h6{
+            font-size: 0.95rem;
+            margin: 0;
+            text-align: center;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+        }
+    }
 
 }
+

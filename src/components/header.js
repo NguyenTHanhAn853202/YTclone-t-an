@@ -14,16 +14,19 @@ import { config } from "~/router/config";
 import Tooltip from "./ToolTip";
 import TippyRender from "./tippyRender";
 import ResultSearch from "./resultSearch";
+import { useSideBar } from "~/context";
 
 
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({setSmallSizeMode}) {
     const [isLoading,setIsloading] = useState(false)
     const [isClear,setIsClear] = useState(false)
     const [value,setValue] = useState("")
     const [listSearched,setListSearched] = useState([]) //
     const valueDebounce = useDebounce(value,1000)
+
+    const modeSideBar = useSideBar(state=>state.toggleMode)
 
     useEffect(()=>{
         setListSearched([])
@@ -69,8 +72,8 @@ function Header() {
     return (
         <div className={cx("wrapper")} >
                 <div className={cx('container','d-flex','justify-content-between','align-items-center')}>
-                    <div className="d-flex">
-                        <button className="fs-1 d-flex align-items-center bg-transparent"><MdOutlineViewHeadline /></button>
+                    <div className="d-flex">    
+                        <button onClick={modeSideBar} className="fs-1 d-flex align-items-center bg-transparent"><MdOutlineViewHeadline /></button>
                         <Tooltip content="Trang chủ">
                             <Link to={config.home}><h1 className="ps-4">AnYTube</h1></Link>
                         </Tooltip>

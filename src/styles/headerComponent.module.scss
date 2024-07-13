@@ -5,7 +5,13 @@
 }
 
 .wrapper{
-    padding: 10px $layout-space-left;
+    position: fixed;
+    background-color: white;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    padding: $padding-bottom-top-header $layout-space-left;
     display: flex;
     justify-content: center;
     .container{
@@ -15,7 +21,7 @@
         
             position: relative;
             width: 600px;
-            height: 42px;
+            height:$height-header;
             border:$border;
             border-radius: 20px;
             // overflow: hidden;

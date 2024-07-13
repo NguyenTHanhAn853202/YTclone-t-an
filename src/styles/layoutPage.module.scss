@@ -1,7 +1,19 @@
 @use 'variables' as *;
 
 .wrapper{
-    .header{
-        // background-color: $bg-color-header;
+    position: relative;
+    header{
+        height: calc($padding-bottom-top-header*2 + $height-header);
+    }
+    .side-bar{
+        // height: calc(100dvh - $height-header - $padding-bottom-top-header);
+        width: 240px;
+        // position: relative;
+        display: block;
+    }
+    .small{
+        width: 100px;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
